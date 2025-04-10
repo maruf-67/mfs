@@ -20,26 +20,7 @@
 
     <div class="flex min-h-screen bg-gray-100">
         <!-- Sidebar -->
-        <div x-data="{ open: false }" class="flex-shrink-0 bg-gray-800 text-white w-64 min-h-screen">
-            <div class="p-4 text-center font-semibold text-xl">Admin Dashboard</div>
-            <nav class="space-y-2">
-                <a href="{{ route('dashboard') }}" class="block px-4 py-2 hover:bg-gray-700 rounded">
-                    <i class="fas fa-tachometer-alt mr-2"></i> Dashboard
-                </a>
-                <a href="{{ route('user.index') }}" class="block px-4 py-2 hover:bg-gray-700 rounded">
-                    <i class="fas fa-users mr-2"></i> Users
-                </a>
-                <a href="{{ route('transaction.index') }}" class="block px-4 py-2 hover:bg-gray-700 rounded">
-                    <i class="fas fa-exchange-alt mr-2"></i> Transactions
-                </a>
-                <a href="{{ route('blocked.index') }}" class="block px-4 py-2 hover:bg-gray-700 rounded">
-                    <i class="fas fa-ban mr-2"></i> Blocked Numbers
-                </a>
-                <a href="{{ route('method.index') }}" class="block px-4 py-2 hover:bg-gray-700 rounded">
-                    <i class="fas fa-mobile-alt mr-2"></i> MFS
-                </a>
-            </nav>
-        </div>
+        @include('layouts.sidebar')
         <div class="flex-1 flex flex-col">
             <!-- Navbar -->
             @include('layouts.navigation')
